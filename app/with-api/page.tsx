@@ -5,7 +5,7 @@ async function getAllWorlds() {
   const res = await fetch(process.env.BASE_URL + "/api/worlds", {
     cache: "no-cache",
   });
-  const worlds = await res.json();
+  const worlds = await res?.json();
   return worlds;
 }
 
